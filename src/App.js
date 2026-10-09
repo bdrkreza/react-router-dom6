@@ -1,12 +1,13 @@
-import { BrowserRouter } from "react-router-dom";
+import { useRoutes } from "react-router-dom";
+import { routes } from "./admin/routes";
 import AppRouter from "./AppRouter";
 
 function App() {
+  const routing = useRoutes(routes);
   return (
     <>
-      <BrowserRouter>
-        <AppRouter />
-      </BrowserRouter>
+      {routing}
+      <AppRouter />
     </>
   );
 }
